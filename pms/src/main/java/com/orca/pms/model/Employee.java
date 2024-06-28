@@ -3,19 +3,19 @@ package com.orca.pms.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 
 import java.util.Date;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "employee")
 @Data
-@SuperBuilder
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employees {
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     String employeeId;
